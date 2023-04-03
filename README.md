@@ -43,8 +43,8 @@ List of tasks that need to be completed for the project, such as fixing bugs, im
 - [x] Display the current question once the survey starts, and make it available for the amount of time specified in the `lifetimeSeconds` property.
 - [x] Move onto the next question whether it's answered or not.
 - [x] Show an overview with all the answers once all the questions are finished.
-- [] Show a button to submit the questions to the validator contract.
-- [ ] Refresh the balance of $QUIZ.
+- [x] Show a button to submit the questions to the validator contract.
+- [x] Refresh the balance of $QUIZ.
 
 ## Bonus Tasks
 
@@ -53,3 +53,5 @@ List of tasks as Bonus, as clean code, scalable solution, etc
 - [x] Implement MobX as global statment
 - [x] Animations
 - [x] Code Documentation
+- [x] Reset the values after submit
+- [x] Loading to wait the tx finish
