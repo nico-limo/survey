@@ -1,4 +1,4 @@
-# Project Title
+# Surver RatherLabs Challenge
 
 A Web3 survey connected to the Goerli network that rewards users with QUIZ tokens upon completion of the process.
 
@@ -38,10 +38,18 @@ List of tasks that need to be completed for the project, such as fixing bugs, im
 
 - [x] Connect Metamask wallet.
 - [x] Ensure the user is connected to the Goerli network. If not, show a button to switch networks automatically.
-- [ ] Display the balance of the $QUIZ token ([address](https://goerli.etherscan.io/address/0x437ef217203452317c3c955cf282b1ee5f6aaf72)).
+- [x] Display the balance of the $QUIZ token ([address](https://goerli.etherscan.io/address/0x437ef217203452317c3c955cf282b1ee5f6aaf72)).
 - [ ] Present the title of the daily trivia with its picture and a button to begin answering once the page is loaded.
 - [ ] Display the current question once the survey starts, and make it available for the amount of time specified in the `lifetimeSeconds` property.
 - [ ] Move onto the next question whether it's answered or not.
 - [ ] Show an overview with all the answers once all the questions are finished.
 - [ ] Show a button to submit the questions to the validator contract.
 - [ ] Refresh the balance of $QUIZ.
+
+## Bonus Tasks
+
+List of tasks as Bonus, as clean code, scalable solution, etc
+
+- [x] Implement MobX as global statment
+- [x] Animations
+- [x] Code Documentation

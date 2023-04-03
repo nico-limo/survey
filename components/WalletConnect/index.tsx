@@ -1,31 +1,41 @@
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React from 'react'
 import metamaskImage from '@/assets/metamask.png'
-import { metamaskConnect } from '@/utils/metamask'
+import { accountBalance, metamaskConnect } from '@/utils/methods'
+import { observer } from 'mobx-react'
+import store from '@/store'
+import { initialWallet } from '@/utils/constants'
+import { WalletInterface } from '@/types'
 
-const WalletConnect = () => {
-  const [account, setAccount] = useState<string>('')
+const WalletConnect = observer(() => {
   const connectWallet = async () => {
     const { account, error } = await metamaskConnect()
     if (error) {
       // Handle Error Logic
     } else {
-      setAccount(account)
+      const balance = await accountBalance(account)
+
+      const newWallet: WalletInterface = {
+        account,
+        balance,
+        isConnected: true,
+      }
+      store.setWallet(newWallet)
     }
   }
   const disconnectWallet = async () => {
-    setAccount('')
+    store.setWallet(initialWallet)
   }
 
   return (
     <button
-      onClick={() => (account ? disconnectWallet() : connectWallet())}
-      className='bg-gray-800 text-white rounded-lg px-4 py-2 flex items-center space-x-2 hover:bg-blue-800 transition duration-300'
+      onClick={() => (store.wallet.isConnected ? disconnectWallet() : connectWallet())}
+      className='bg-gray-800 text-white rounded-lg px-4 py-2 min-w-[220px] flex items-center space-x-2 hover:bg-blue-800 transition duration-300'
     >
       <Image src={metamaskImage} alt='Metamask Logo' width={30} height={30} />
-      <span>{account ? account : 'Connect Wallet'}</span>
+      <span>{store.wallet.isConnected ? 'Disconnect Wallet' : 'Connect Wallet'}</span>
     </button>
   )
-}
+})
 
 export default WalletConnect
