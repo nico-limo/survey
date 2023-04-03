@@ -1,5 +1,6 @@
 import React from 'react'
 import WalletConnect from '../WalletConnect'
+import AccountInfo from '../AccountInfo'
 
 const Navbar = () => {
   return (
@@ -9,7 +10,8 @@ const Navbar = () => {
           Survey RatherLabs
         </a>
       </div>
-      <div className='px-5 flex w-full items-center justify-end'>
+      <div className='px-5 flex flex-row items-center w-full justify-end gap-[40px]'>
+        <AccountInfo />
         <WalletConnect />
       </div>
     </nav>
