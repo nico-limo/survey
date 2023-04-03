@@ -19,7 +19,7 @@ List of tools, frameworks, libraries, or APIs used in the project. You can also 
 - [Prettier](https://prettier.io/) - An opinionated code formatter that enforces consistent code styles across your entire codebase.
 - [TypeScript](https://www.typescriptlang.org/) - A superset of JavaScript that provides static typing and other language features.
 - [Husky](https://typicode.github.io/husky/) - A tool that provides Git hooks for running scripts before committing or pushing code changes.
-- [MobX-state-tree](https://mobx-state-tree.js.org/) - A library for creating immutable state trees with first-class support for TypeScript.
+- [MobX-state-tree](https://mobx-state-tree.js.org/) - A library for creating immutable state trees with first-className support for TypeScript.
 - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for quickly building custom designs without writing CSS from scratch.
 - [Ethers](https://docs.ethers.io/v5/) - A library for interacting with the Ethereum blockchain and its ecosystem.
 
@@ -36,8 +36,8 @@ To get started with this project, follow these steps:
 
 List of tasks that need to be completed for the project, such as fixing bugs, implementing new features, or refactoring code. You can also use this section to assign tasks to specific team members or contributors.
 
-- [ ] Connect Metamask wallet.
-- [ ] Ensure the user is connected to the Goerli network. If not, show a button to switch networks automatically.
+- [x] Connect Metamask wallet.
+- [x] Ensure the user is connected to the Goerli network. If not, show a button to switch networks automatically.
 - [ ] Display the balance of the $QUIZ token ([address](https://goerli.etherscan.io/address/0x437ef217203452317c3c955cf282b1ee5f6aaf72)).
 - [ ] Present the title of the daily trivia with its picture and a button to begin answering once the page is loaded.
 - [ ] Display the current question once the survey starts, and make it available for the amount of time specified in the `lifetimeSeconds` property.
