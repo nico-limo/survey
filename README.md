@@ -1,4 +1,4 @@
-# Surver RatherLabs Challenge
+# Survey RatherLabs Challenge
 
 A Web3 survey connected to the Goerli network that rewards users with QUIZ tokens upon completion of the process.
 
