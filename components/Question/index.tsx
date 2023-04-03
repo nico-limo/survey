@@ -23,7 +23,7 @@ const Question = observer(({ questionData }: QuestionInterface) => {
     if (timeLeft === 0) {
       clearTimeout(timer)
       // We set with null the answer
-      setAnswer({ answerId: null, value: 'Not Answer' })
+      setAnswer({ answerId: 999, value: 'Not Answer' })
 
       nextQuestion()
     }

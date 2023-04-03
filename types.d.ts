@@ -18,5 +18,5 @@ export interface QuestionInterface {
 
 export interface AnswerInterface {
   value: string
-  answerId: number | null
+  answerId: number
 }

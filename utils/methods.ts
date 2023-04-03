@@ -48,8 +48,37 @@ export const accountBalance = async (account: string): Promise<string> => {
     const contract = new ethers.Contract(QUIZ_CONTRACT, abi, provider)
     // Retrieve the balance of the account using the contract instance and convert it to a string.
     const balance = await contract.balanceOf(account)
-    return balance.toString()
+    const balanceFormatted = formatBalance(balance)
+    return balanceFormatted
   } catch (error) {
     return '0'
   }
+}
+
+/**
+ * Submits the user's answers for a survey Id to the Quiz token contract
+ * @param {number} surveyId - The ID of the survey being answered
+ * @param {number[]} answers - An array of numbers representing the user's answers to the survey questions
+ */
+
+export const submitAnswers = async (surveyId: number, answers: number[]) => {
+  try {
+    const { ethereum } = window
+    const provider = new ethers.BrowserProvider(ethereum)
+    const signer = await provider.getSigner()
+    const contract = new ethers.Contract(QUIZ_CONTRACT, abi, signer)
+    const tx = await contract.submit(surveyId, answers)
+    await tx.wait()
+  } catch (error) {
+    throw 'Error on Submit Answers'
+  }
+}
+
+/**
+ * Format the user's balance with 18 decimals
+ * @param {number} balance - The balance that came from the ERC-20 Smart Contract
+ * @returns a formatted balance
+ */
+function formatBalance(balance: string): string {
+  return ethers.formatUnits(balance, 18)
 }
