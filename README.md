@@ -2,6 +2,7 @@
 
 A Web3 survey connected to the Goerli network that rewards users with QUIZ tokens upon completion of the process.
 
+<img src="./assets/screen1.png" >
 ## Requirements
 
 To run this project, you'll need:
@@ -31,6 +32,7 @@ To get started with this project, follow these steps:
 2. Install the project dependencies using either Yarn or npm. To install with Yarn, run `yarn install`. To install with npm, run `npm install`.
 3. Start the development server by running `yarn dev` or `npm run dev` in the terminal.
 4. Open your browser and navigate to `http://localhost:3000` to view the application.
+5. Navigate to the deployed site at [vercel](https://survey-indol.vercel.app/) to view the live application.
 
 ## Tasks
 
@@ -55,3 +57,4 @@ List of tasks as Bonus, as clean code, scalable solution, etc
 - [x] Code Documentation
 - [x] Reset the values after submit
 - [x] Loading to wait the tx finish
+- [x] Deployed on Vercel
