@@ -59,3 +59,7 @@ List of tasks as Bonus, as clean code, scalable solution, etc
 - [x] Reset the values after submit
 - [x] Loading to wait the tx finish
 - [x] Deployed on Vercel
+- [x] Add a Progress Bar to show the expected size of answers
+- [ ] Update the account when is changed on Metamask
+- [ ] Save the wallet and the actual answers into the localStorage in case the user close or refresh the page
+- [ ] Replace the alert to show notifications
