@@ -21,10 +21,14 @@ const WalletConnect = observer(() => {
         isConnected: true,
       }
       store.setWallet(newWallet)
+      //Save the wallet on the localStorage
+      localStorage.setItem('wallet', JSON.stringify(newWallet))
     }
   }
   const disconnectWallet = async () => {
     store.setWallet(initialWallet)
+    // Remove wallet on the localStorage
+    localStorage.setItem('wallet', JSON.stringify(initialWallet))
   }
 
   return (

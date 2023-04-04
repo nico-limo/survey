@@ -25,6 +25,7 @@ class Store {
   resetAnswers = () => {
     this.userAnswers = []
     this.questionIndex = 0
+    this.readyToStart = false
   }
   // The `nextQuestion` method increments the question index so that the next question can be displayed.
   nextQuestion = () => {

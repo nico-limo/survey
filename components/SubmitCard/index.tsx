@@ -6,7 +6,7 @@ import { accountBalance, submitAnswers } from '@/utils/methods'
 
 const SubmitCard = observer(() => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
-  const { userAnswers, wallet, setWallet, resetAnswers, setSurveyStatus } = store
+  const { userAnswers, wallet, setWallet, resetAnswers } = store
 
   const onSubmit = async () => {
     try {
@@ -15,7 +15,7 @@ const SubmitCard = observer(() => {
       await submitAnswers(1, onlyAnswers)
       setIsLoading(false)
       const newBalance = await accountBalance(wallet.account)
-      setSurveyStatus(false)
+
       setWallet({ ...wallet, balance: newBalance })
       resetAnswers()
     } catch (error) {
