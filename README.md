@@ -11,7 +11,7 @@ To run this project, you'll need:
 - Node.js version 16 or higher installed on your computer.
 - Yarn or npm package manager installed on your computer.
 - Metamask wallet extension installed on your browser. You can download and install it from [metamask.io](https://metamask.io/).
-- Have Goerli network connected on your metamask and have Ethers for Gas Transactions
+- Have Goerli network connected on your metamask and have Ethers for Gas Transactions. [Faucet One](https://goerlifaucet.com/).
 
 ## Tools Used
 
@@ -60,6 +60,7 @@ List of tasks as Bonus, as clean code, scalable solution, etc
 - [x] Loading to wait the tx finish
 - [x] Deployed on Vercel
 - [x] Add a Progress Bar to show the expected size of answers
-- [ ] Update the account when is changed on Metamask
-- [ ] Save the wallet and the actual answers into the localStorage in case the user close or refresh the page
+- [x] Update the account when is changed on Metamask
+- [x] Save the wallet localStorage in case the user close or refresh the page
+- [ ] Save the answers localStorage in case the user close or refresh the page
 - [ ] Replace the alert to show notifications

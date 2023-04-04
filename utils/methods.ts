@@ -22,9 +22,7 @@ export const metamaskConnect = async (): Promise<{ account: string; error?: bool
           params: [{ chainId: '0x5' }],
         })
       }
-
       const [account] = await provider.send('eth_requestAccounts', [])
-
       return { account }
     } else {
       return { account: '', error: true }
