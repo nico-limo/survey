@@ -2,7 +2,7 @@
 
 A Web3 survey connected to the Goerli network that rewards users with QUIZ tokens upon completion of the process.
 
-<img src="./assets/screen1.png" >
+<img src="./assets/screen.png" >
 <img src="./assets/screen2.png" >
 
 ## Requirements
