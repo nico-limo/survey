@@ -3,8 +3,9 @@ import store from '@/store'
 import { observer } from 'mobx-react'
 
 const ProgressBar = observer(() => {
-  const { questionIndex, questionSize } = store
+  const { questionIndex, questionSize, readyToStart } = store
 
+  if (!readyToStart) return null
   return (
     <div className='bg-gray-500 h-4 w-[40%] rounded-lg'>
       <div
